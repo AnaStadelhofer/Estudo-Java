@@ -5,8 +5,21 @@ public class ListaDois {
     public static void main(String[] args) {
         Scanner print = new Scanner(System.in); //declara
         int escolha = 0;
-        escolha = print.nextInt(); //cin
-
+        
+        do{
+            System.out.println("Escolha um número!");
+            System.out.println(" [1] - Nota");
+            System.out.println(" [2] - Mês");
+            System.out.println(" [3] - Forca");
+            System.out.println(" [4] - Tabuada");
+            System.out.println(" [5] - Letra a letra");
+            System.out.println(" [6] - Impares de 0 a 500");
+            System.out.println(" [7] - Nota negativa");
+            System.out.println(" [8] - Fatorial");
+            System.out.println(" [9] - IMC");
+            System.out.println(" [10] - Operação");
+            System.out.println("\n Escolho o número: ");
+            escolha = print.nextInt(); //cin
         switch(escolha) {
             case 1:
                 //Crie um programa que receba três notas calcule a média e diga se foi aprovado ((nota1 + nota2 + nota3 / 3)) e (média maior que 7 para ser aprovado).
@@ -58,6 +71,12 @@ public class ListaDois {
             case 3: 
                 //Crie um programa que simule um jogo da forca, com a entrada da palavra oculta, a quantidade de tentativas para acerto e depois solicite a entrada da palavra.
                 //A cada erro deve imprimir a quantidade de tentativas restantes e o 'membro' que foi marcado. Ao final deve imprimir se acertou ou não a palavra e se foi 'enforcado'.
+                String palavra = print.next();
+                if(palavra.equals("forca")) {
+                    System.out.println("ESTÁ SALVO");
+                } else {
+                    System.out.println("FOI ENFORCADO");
+                }
             break;
             case 4:
                 // Crie um programa que imprima a tabuada de 0 a 10.
@@ -71,6 +90,10 @@ public class ListaDois {
             break;
             case 5: 
                 // Crie um programa que receba uma String e imprima linha a linha suas letras
+                String value = print.next();
+                for(int cont = 0; cont < value.length(); cont++) {
+                    System.out.println(value.charAt(cont));
+                }
             break;
             case 6:
                 //  Crie um programa que de a soma de todos os números ímpares e múltiplos de 7 entre 1 e 500
@@ -89,28 +112,77 @@ public class ListaDois {
                 int media_nota = 0;
                 int soma = 0;
                 do{
-                    System.out.println("Informe uma nota:");
+                    System.out.println("\n Informe uma nota:");
                     nota = print.nextInt();
                     cont++;
                     soma = soma + nota;
                 } while(nota >= 0);
                 media_nota = soma / cont;
-                System.out.println("A média foi: " + media_nota);
+                System.out.println("\n A média foi: " + media_nota);
             break;
             case 8:
                 // Crie um programa que receba um valor e imprima o fatorial desse número. Ex.: 3! = 3 x 2 x 1 = 6.
                 int fatorial = 0;
                 int temp_fat = 1;
-                System.out.println("Informe um fatorial:");
+                System.out.println("\n Informe um fatorial:");
                 fatorial = print.nextInt();
                 for(int i = 1; i<=fatorial; i++) {
                     temp_fat *= i;;
                 }
-                System.out.println("O resultado fatorial " + fatorial + " é " + temp_fat);
+                System.out.println("\n O resultado fatorial " + fatorial + " é " + temp_fat);
             break;
             case 9:
                 // Crie um programa que receba a altera e o peso e calcule o IMC:
+                System.out.println("\n Informe a sua altura");
+                double altura = print.nextDouble();
+                System.out.println("\n Informe seu peso");
+                double peso = print.nextDouble();
+                Double imc = 0.0;
+                imc = peso / (altura * altura);
+                System.out.println(imc);
+                if(imc < 18.5) {
+                    System.out.println("Abaixo do peso");
+                } else if(imc > 18.6 && imc < 24.9) {
+                    System.out.println("Peso ideal");
+                } else if(imc > 25 && imc < 29.9) {
+                    System.out.println("Levemente acima do peso");
+                } else if(imc > 30 && imc > 34.9) {
+                    System.out.println("Obesidade grau I");
+                } else if(imc > 35 && imc > 39.9) {
+                    System.out.println("Obesidade grau II");
+                } else if(imc > 40) {
+                    System.out.println("Obesidade grau III");
+                }
+                
+            break;
+            case 10:
+                // 10) Crie um programa que receba dois valores e solicite a operação a ser realizada (+ - * /). Ao final imprima o resultado.
+                System.out.println("\n Escolha o número 1");
+                int num1 = print.nextInt();
+                System.out.println("\n Escolha o número 2");
+                int num2 = print.nextInt();
+                int resultado = 0;
+                System.out.println("\n Escolha uma operação! + - * /");
+                String operador = print.next();
+                if(operador.equals("+")) {
+                    resultado = num1 + num2;
+                    System.out.println("\n O resultado é "+ resultado);
+                }
+                if(operador.equals("*")) {
+                    resultado = num1 * num2;
+                    System.out.println("\n O resultado é "+ resultado);
+                }
+                if(operador.equals("/")) {
+                    resultado = num1 / num2;
+                    System.out.println("\n O resultado é "+ resultado);
+                }
+                if(operador.equals("-")) {
+                    resultado = num1 - num2;
+                    System.out.println("\n O resultado é "+ resultado);
+                }
             break;
         }
+    } while(escolha > 10 || escolha < 1);
+    print.close();
     }   
 }
