@@ -18,6 +18,7 @@ public class ListaDois {
             System.out.println(" [8] - Fatorial");
             System.out.println(" [9] - IMC");
             System.out.println(" [10] - Operação");
+            System.out.println(" [11] - Desafio");
             System.out.println("\n Escolho o número: ");
             escolha = print.nextInt(); //cin
         switch(escolha) {
@@ -114,6 +115,7 @@ public class ListaDois {
                 do{
                     System.out.println("\n Informe uma nota:");
                     nota = print.nextInt();
+                    
                     cont++;
                     soma = soma + nota;
                 } while(nota >= 0);
@@ -126,6 +128,7 @@ public class ListaDois {
                 int temp_fat = 1;
                 System.out.println("\n Informe um fatorial:");
                 fatorial = print.nextInt();
+               
                 for(int i = 1; i<=fatorial; i++) {
                     temp_fat *= i;;
                 }
@@ -133,10 +136,22 @@ public class ListaDois {
             break;
             case 9:
                 // Crie um programa que receba a altera e o peso e calcule o IMC:
+                double peso = 0;
+                double altura = 0;
+                try{
                 System.out.println("\n Informe a sua altura");
-                double altura = print.nextDouble();
+                altura = print.nextDouble();
+                }catch(java.util.InputMismatchException e){
+                    System.out.println("Valor invalido!");
+                }
+                print.next();
+                try{
                 System.out.println("\n Informe seu peso");
-                double peso = print.nextDouble();
+                peso = print.nextDouble();
+                }catch(java.util.InputMismatchException e){
+                    System.out.println("Valor invalido!");
+                }
+                print.next();
                 Double imc = 0.0;
                 imc = peso / (altura * altura);
                 System.out.println(imc);
@@ -157,13 +172,28 @@ public class ListaDois {
             break;
             case 10:
                 // 10) Crie um programa que receba dois valores e solicite a operação a ser realizada (+ - * /). Ao final imprima o resultado.
+                int num2 = 0;
+                int num1 = 0;
+                try{
                 System.out.println("\n Escolha o número 1");
-                int num1 = print.nextInt();
+                num1 = print.nextInt();
+                }  catch(java.util.InputMismatchException e){
+                    System.out.println("Escolha um número!");
+                }
+                try {
                 System.out.println("\n Escolha o número 2");
-                int num2 = print.nextInt();
+                num2 = print.nextInt();
+                } catch(java.util.InputMismatchException e){
+                    System.out.println("Escolha um número! ");
+                }
                 int resultado = 0;
+                String operador = "+";
+                try {
                 System.out.println("\n Escolha uma operação! + - * /");
-                String operador = print.next();
+                operador = print.next();
+                }catch(java.util.InputMismatchException e){
+                    System.out.println("Ocorreu um erro: ");
+                }
                 if(operador.equals("+")) {
                     resultado = num1 + num2;
                     System.out.println("\n O resultado é "+ resultado);
@@ -181,8 +211,13 @@ public class ListaDois {
                     System.out.println("\n O resultado é "+ resultado);
                 }
             break;
+            case 11:
+                // Crie um programa que receba um valor em reais e determine qual o mínimo de notas necessárias para entregá-lo. <br> Notas: R$ 100, R$ 50, R$ 10, R$ 5, R$ 1 <br> 
+                //Exemplo: R$ 15 -> 1 nota de R$ 10 e 1 nota de R$ 5
+
+            break;
         }
-    } while(escolha > 10 || escolha < 1);
+    } while(escolha > 11 || escolha < 1);
     print.close();
     }   
 }
