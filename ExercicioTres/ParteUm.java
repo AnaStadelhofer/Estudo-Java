@@ -6,6 +6,7 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 public class ParteUm {
+    // 1) Crie um programa que receba um valor e calcule a tabuada deste valor, salvando seu resultado em um arquivo de texto.
     public static void main(String[] args) {
         Scanner print = new Scanner(System.in);
         int tabuada = 0;
