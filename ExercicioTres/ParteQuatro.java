@@ -10,16 +10,16 @@ public class ParteQuatro {
     try{
         num = print.nextInt();
     } catch(Exception e) {
-        System.out.println("\n Número invaido");
+        System.out.println("\n Número invalido");
     }
     try{
         expoente = print.nextInt();
     } catch(Exception e) {
-        System.out.println("\n Número invaido");
+        System.out.println("\n Número invalido");
     }
     
     double resultado = Math.pow(num,expoente);
-    System.out.println("\n O resultado é: " + resultado);
+    System.out.println("\n A operação é " + num + " elevado a " + expoente + ", o resultado é: " + resultado);
 
     }
 }
