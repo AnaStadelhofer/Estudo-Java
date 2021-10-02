@@ -26,6 +26,6 @@ public class ParteUm {
         }
             media = soma/i;
             System.out.println(" Foi digitado " + i + " notas, a soma foi " + soma + " e a media foi " + media);
-            print.close();
+        print.close();
         }
 }

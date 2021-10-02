@@ -21,7 +21,8 @@ public class ParteUm {
             System.out.println("Valor invalido!");
         } catch (IOException exception){
             System.out.println("Erro de exceção I/O: " + exception.getMessage());
-        }       
+        }   
+        print.close();    
     }
 }
 

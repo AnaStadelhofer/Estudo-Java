@@ -1,43 +1,24 @@
 package ExercicioTres;
 import java.util.Scanner;
+import java.util.Random;
 public class ParteCinco {
     public static void main(String[] args) {
         // 5) Crie um programa que receba o nome de 5 pessoas e aleatorize eles
+        Random random = new Random();
         Scanner print = new Scanner(System.in);
-        String nome1 = "";
-        String nome2 = "";
-        String nome3 = "";
-        String nome4 = "";
-        String nome5 = "";
+        int qtd = 5;
+        String[] nome = new String[qtd];
         try{
-            System.out.println("\n Digite o primeiro nome: "); 
-            nome1 = print.next();
+            for(int i=0; i<qtd; i++){
+                System.out.println("\n Digite o "+(i+1)+" nome: "); 
+                nome[i] = print.next();
+            }
         }catch(Exception e){
             System.out.println("\n Digite um nome! ");
         }
-        try{
-            System.out.println("\n Digite o primeiro nome: "); 
-            nome2 = print.next();
-        }catch(Exception e){
-            System.out.println("\n Digite um nome! ");
+        for(int i=0; i<qtd; i++){
+            System.out.println("O " + (i+1) + "a nome foi: " + nome[i]);
         }
-        try{
-            System.out.println("\n Digite o primeiro nome: "); 
-            nome3 = print.next();
-        }catch(Exception e){
-            System.out.println("\n Digite um nome! ");
-        }
-        try{
-            System.out.println("\n Digite o primeiro nome: "); 
-            nome4 = print.next();
-        }catch(Exception e){
-            System.out.println("\n Digite um nome! ");
-        }
-        try{
-            System.out.println("\n Digite o primeiro nome: "); 
-            nome5 = print.next();
-        }catch(Exception e){
-            System.out.println("\n Digite um nome! ");
-        }
+        print.close();
     }
 }

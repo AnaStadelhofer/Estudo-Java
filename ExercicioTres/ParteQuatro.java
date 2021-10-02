@@ -20,6 +20,6 @@ public class ParteQuatro {
     
     double resultado = Math.pow(num,expoente);
     System.out.println("\n A operação é " + num + " elevado a " + expoente + ", o resultado é: " + resultado);
-
+    print.close(); 
     }
 }
