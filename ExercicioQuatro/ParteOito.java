@@ -1,4 +1,4 @@
-package ExercicioQuatro;
+
 import java.util.Scanner;
 public class ParteOito {
     // 8) Crie um programa que receba a temperatura média de cada mês do ano e após exiba a temperatura média do ano.

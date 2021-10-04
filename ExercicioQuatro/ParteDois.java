@@ -1,4 +1,4 @@
-package ExercicioQuatro;
+
 
 public class ParteDois {
     public static void main(String[] args) {

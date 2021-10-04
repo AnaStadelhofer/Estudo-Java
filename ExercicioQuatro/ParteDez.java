@@ -1,4 +1,4 @@
-package ExercicioQuatro;
+
 import java.util.Scanner;
 public class ParteDez {
     // 10) Crie um programa que leia 20 valores, calcule a média aritmética desses valores e imprima os valores que são inferiores a esta média.

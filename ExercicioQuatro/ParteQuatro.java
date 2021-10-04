@@ -1,4 +1,4 @@
-package ExercicioQuatro;
+
 import java.util.Scanner;
 public class ParteQuatro {
     public static void main(String[] args) {
