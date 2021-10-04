@@ -14,7 +14,7 @@ public class ParteQuatro {
                 System.out.println(" Número invalido! ");
             }
         }
-        for(int i = 0; i < qtd; i++) {
+        for(int i = 0; i < numeros.length; i++) {
             if(numeros[i] % 2 == 0) {
                 System.out.println(" O número "+ numeros[i] + " é par");
             } else {
