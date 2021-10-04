@@ -1,33 +1,36 @@
-package ExercicioQuatro;
-import java.util.HashSet;
-import java.util.Set;
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class ParteCinco {
-        //5) Crie um programa que possua uma collection que represente as 52 cartas do baralho, imrpima elas. 
-        public static void main(String[] args) {
-            String[] numeros = { "A", "1", "2"};
-            String[] nipes = { "Copas", "Paus", "Ouros", "Espadas"};
-            Set<String> set = new HashSet<String>();
-            SortedSet<String> SetOrdenado = new TreeSet<>();
-        
-            for(String nipe : nipes) {
-                for(String numero : numeros) {
-                    String carta = numero + " "+nipe;
-                    set.add(carta);
-                    SetOrdenado.add(carta);
-                }
-            }
-            System.out.println("Baralho comum");
-            for(String valores:set){
-                System.out.println(valores);
-            }
-            /*
-            for(String carta:sortedSet){
-                System.out.println(carta);
-            } 
-            */
-        }     
-}
+    public static void main(String[] args) {
+        ArrayList<String> list = new ArrayList<>();
 
+        list.add("Valor 1 da 1º Lista");
+        list.add("Valor 2 da 1º Lista");
+        list.add("Valor 3 da 1º Lista");
+        list.add("Valor 1 da 1º Lista");
+        /*
+        for(String value:list){
+            System.out.println(value);
+        }
+        */
+        ArrayList<String> list2 = new ArrayList<>();
+
+        list2.add("Valor 4 da 2º Lista");
+        list2.add("Valor 2 da 2º Lista");
+        list2.add("Valor 3 da 2º Lista");
+        list2.add("Valor 1 da 2º Lista");
+        /*
+        for(String value:list2){
+            System.out.println(value);
+        }
+        */
+        List<String> resultList1 = Stream.concat(list.stream(), list2.stream()).collect(Collectors.toList());
+        for(int i=0;i<resultList1.size();i++)
+        {
+            System.out.print(resultList1.get(i)+" \n");
+        }
+    }
+}
