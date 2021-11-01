@@ -1,4 +1,4 @@
-package ExercicioUm;
+package Exemplos.ExercicioUm;
 
 public class Populacao {
     String nome;

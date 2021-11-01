@@ -1,4 +1,4 @@
-package ExercicioUm;
+package Exemplos.ExercicioUm;
 
 public class Bandeira {
     String cor;

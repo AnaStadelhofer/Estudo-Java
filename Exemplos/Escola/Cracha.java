@@ -1,4 +1,4 @@
-package Escola;
+package Exemplos.Escola;
 public class Cracha {
     String dataInicial;
     String numero;
