@@ -1,4 +1,4 @@
-package Fruteira;
+package Exemplos.Fruteira;
 public class Fruta {
     String nome;
 

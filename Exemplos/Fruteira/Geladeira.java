@@ -1,4 +1,4 @@
-package Fruteira;
+package Exemplos.Fruteira;
 import java.util.ArrayList;
 
 public class Geladeira {

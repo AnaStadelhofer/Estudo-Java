@@ -1,4 +1,4 @@
-package Fruteira;
+package Exemplos.Fruteira;
 public class Casa {
     public static void main(String[] args) {
         Geladeira geladeira = new Geladeira("Rosa");

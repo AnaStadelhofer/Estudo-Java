@@ -1,3 +1,4 @@
+package Exemplos;
 public class JetSki {
     int potencia;
     Double valor;

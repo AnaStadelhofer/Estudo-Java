@@ -1,4 +1,4 @@
-package Escola;
+package Exemplos.Escola;
 public class Aluno {
     String nome;
     String telefone;

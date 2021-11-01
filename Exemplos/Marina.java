@@ -1,3 +1,4 @@
+package Exemplos;
 public class Marina {
     public static void main(String[] args) {
         Iate iateNovo = new Iate();

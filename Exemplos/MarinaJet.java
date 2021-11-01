@@ -1,3 +1,4 @@
+package Exemplos;
 public class MarinaJet {
     public static void main(String[] args) {
         JetSki jetNovo = new JetSki(20, 2000000.00, "RXP X 300", 2019, "Sea-Doo", 2, true, false, true, false);

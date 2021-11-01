@@ -1,4 +1,4 @@
-package ExercicioUm;
+package Exemplos.ExercicioUm;
 import java.util.ArrayList;
 
 public class Cidade {
