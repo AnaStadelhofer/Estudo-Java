@@ -3,10 +3,12 @@ import java.util.Objects;
 public class Investimento extends Conta{
     private String carteira;
     private Gerente gerente;
-    public Investimento(String agencia, int conta, Double saldo, Gerente gerente){
+    private Correntista correntista;
+    public Investimento(String agencia, int conta, Double saldo, String carteira, Gerente gerente, Correntista correntista){
         super(agencia, conta, saldo);
         this.carteira = carteira;
         this.gerente = gerente;
+        this.correntista = correntista;
     }
 
     public void setCarteira(String carteira){
@@ -25,6 +27,14 @@ public class Investimento extends Conta{
         this.gerente = gerente;
     }
 
+    public Correntista getCorrentista(){
+        return correntista;
+    }
+
+    public void setCorrentista(Correntista correntista){
+        this.correntista = correntista;
+    }
+
     public boolean equals(Object o) {
         if (o == this)
             return true;
@@ -39,6 +49,6 @@ public class Investimento extends Conta{
 		return " O nome da agencia é: " + getAgencia() +
                 "\n O número da sua conta é: " + getConta() +
                 "\n Seu saldo é: " + getSaldo() +
-                "\n Sua carteira é: " + getCarteira();
+                "\n Sua carteira é: " + getCarteira() + "\n\n" ;
 	}
 }

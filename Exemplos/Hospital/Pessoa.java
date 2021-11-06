@@ -1,4 +1,5 @@
 package Exemplos.Hospital;
+import java.util.Objects;
 public class Pessoa {
     private String nome;
     private String cpf;
@@ -32,6 +33,22 @@ public class Pessoa {
 
     public String getDataNascimento(){
         return dataNascimento;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == this)
+            return true;
+        if (!(o instanceof Pessoa)) {
+            return false;
+        }
+        Pessoa pessoa = (Pessoa) o;
+        return Objects.equals(cpf, pessoa.cpf);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome, cpf, dataNascimento);
     }
 
     public String carteira(){

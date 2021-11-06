@@ -38,6 +38,6 @@ public class Conta {
     public String toString(){
 		return " O nome da agencia é: " + getAgencia() +
                 "\n O número da sua conta é: " + getConta() +
-                "\n Seu saldo é: " + getSaldo() + " ";
+                "\n Seu saldo é: " + getSaldo() + "\n\n";
 	}
 }

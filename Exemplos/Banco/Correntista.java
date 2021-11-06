@@ -2,7 +2,7 @@ package Exemplos.Banco;
 import java.util.Objects;
 public class Correntista extends Pessoa {
     private String dataInicio;
-    public Correntista(String nome, String cpf, String dataNascimento){
+    public Correntista(String nome, String cpf, String dataNascimento, String dataInicio){
         super(nome, cpf, dataNascimento);
         this.dataInicio = dataInicio;
     }
@@ -30,7 +30,7 @@ public class Correntista extends Pessoa {
 		return "O nome da pessoa é: " + getNome() +
                 "\n O cpf é: " + getCpf() +
                 "\n A data de nascimento é: " + getDataNascimento() + 
-                "\n A data de inicio é: "+ getDataInicio();
+                "\n A data de inicio é: "+ getDataInicio() + "\n\n";
 	}
 
 }
