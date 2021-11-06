@@ -2,7 +2,7 @@ package Exemplos.Banco;
 import java.util.Objects;
 public class Gerente extends Pessoa{
     private String cargo;
-    public Gerente(String nome, String cpf, String dataNascimento) {
+    public Gerente(String nome, String cpf, String cargo, String dataNascimento) {
         super(nome, cpf, dataNascimento);
         this.cargo = cargo;
     }
@@ -11,7 +11,7 @@ public class Gerente extends Pessoa{
         return cargo;
     }
 
-    public void setCargo(String cargi){
+    public void setCargo(String cargo){
         this.cargo = cargo;
     }
     public boolean equals(Object o) {
@@ -29,6 +29,6 @@ public class Gerente extends Pessoa{
 		return "O nome da pessoa é: " + getNome() +
                 "\n O cpf é: " + getCpf() +
                 "\n A data de nascimento é: " + getDataNascimento() + 
-                "\n O cargo é: "+ getCargo();
+                "\n O cargo é: "+ getCargo() + "\n\n";
 	}
 }

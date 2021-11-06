@@ -1,4 +1,5 @@
 package Exemplos.Banco;
+import java.util.Objects;
 
 public class Pessoa {
     private String nome;
@@ -35,9 +36,25 @@ public class Pessoa {
         return dataNascimento;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (o == this)
+            return true;
+        if (!(o instanceof Pessoa)) {
+            return false;
+        }
+        Pessoa pessoa = (Pessoa) o;
+        return Objects.equals(cpf, pessoa.cpf);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nome, cpf, dataNascimento);
+    }
+
     public String toString(){
 		return "O nome da pessoa é: " + getNome() +
                 "\n O cpf é: " + getCpf() +
-                "\n A data de nascimento é: " + getDataNascimento() + " ";
+                "\n A data de nascimento é: " + getDataNascimento() + "\n\n";
 	}
 }
